@@ -1,0 +1,296 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    min-height: 100%;
+    max-width: 100%;
+}
+body{
+    background-image: url(../images/pig-galaxy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+font-family: 'Open Sans', sans-serif;
+font-size: 20px;
+color: white;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 200px 100px 112px 112px;
+    grid-auto-rows: minmax(200px, auto);
+    justify-items: center;
+    align-items: center;
+    /* justify-items: stretch;
+    align-items: stretch;
+    justify-content: center; */
+}
+.container-header{
+    grid-column: 1/13;
+    grid-row: 1/2;
+}
+.container-header{
+    display: grid;
+    grid-template-columns: 800px 150px 150px 150px 80px;
+}
+
+.box-1{
+
+    /* background: FireBrick; */
+    padding: 20px;
+    padding-right: 25px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 25px;
+  }
+  .box-2{
+    /* background: PeachPuff; */
+    padding: 20px;
+  }
+   a{
+     text-decoration: none;
+     color: white;
+     transition: all 3s ease-in-out;
+     transition: color .5s ease-in-out;
+  }
+   a.animation:hover{
+    border-bottom: 2px solid white;
+    /* color:lightblue; */
+  }
+  .box-3{
+    /* background: SpringGreen; */
+    padding: 20px;
+  }
+  .box-4{
+    /* background: LightSkyBlue; */
+    padding: 20px;
+  }
+  .box-4 .icon i{
+    font-size: 30px;
+    color: LightGrey;
+    cursor: pointer;
+    
+  }
+.box-4 .icon i:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 25px 5px rgba(220,220,220);
+}
+  .box-5{
+    /* background: Fuchsia; */
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+  .box-5 img{
+    width: 50px;
+    height: 50px;
+    /* object-fit: contain; */
+    /* object-position: bottom; */
+    border-radius: 50%;
+  }
+/* main-content----------------------------------------------------------------- */
+
+.central-name{
+   grid-column: 1/13;
+   grid-row: 2/3;
+}
+.central-name{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.central-name h1{  
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  opacity: 0.9;
+  color: LightGray;
+  padding-top: 70px;
+}
+
+/* searching area------------------------------------------------------------------ */
+.button-search{
+    grid-column: 1/13;
+    grid-row: 3/4;
+}
+
+.button-search input[type=text]{
+  width: 50rem;
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid white;
+  outline: none;
+  background: none;
+}
+.button-search input[type=text]::placeholder{
+  font-size: 20px;
+  color: lightgray;
+  opacity: 0.75;
+  text-align: center;
+  /* text-align: center; */
+}
+.button-search input[type=text] {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.button-search{
+  position: relative;
+}
+.button-search i{
+  position: absolute;
+  left: 0;
+  top: 8px;
+  padding: 0px 8px;
+}
+.button-search .microphone{
+ position: absolute;
+ right: 25px;
+ padding: 0 5px;
+}
+/* submenu---------------------------------------------- */
+/* .icons-otherpage{
+    grid-column: 3/7;
+}  */
+
+.icon-name{
+  /* position: relative; */
+  color: lightskyblue;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+.icon-name i:hover{
+  transform: scale(1.1);
+}
+.icon-page{
+  font-size: 15px;
+  position: relative;
+  margin-top: 10px;
+  left: -10px;
+  color: white;
+}
+.one-icon{
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+.two-icon{
+    grid-column: 5/6;
+    grid-row: 4/5;
+}
+.three-icon{
+    grid-column: 6/7;
+    grid-row: 4/5;
+}
+.four-icon{
+    grid-column: 7/8;
+    grid-row: 4/5;
+}
+.five-icon{
+    grid-column: 8/9;
+    grid-row: 4/5;
+}
+.six-icon{
+    grid-column: 4/5;
+    grid-row: 5/6;
+}
+.seven-icon{
+    grid-column: 5/6;
+    grid-row: 5/6;
+}
+.eight-icon{
+    grid-column: 6/7;
+    grid-row: 5/6;
+}
+.nine-icon{
+    grid-column: 7/8;
+    grid-row: 5/6;
+}
+.ten-icon{
+    grid-column: 8/9;
+    grid-row: 5/6;
+}
+@media all and (max-width: 600px) {
+    body{
+    background-image: url(../images/pig-galaxy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 15px;
+    }
+    .container{
+    grid-template-rows: auto 200px 100px auto auto auto;
+    grid-auto-rows: minmax(100px, auto);
+    margin: 0 auto;
+    }
+    .container-header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .container-header .box-1{
+        font-size: 16px;
+    }
+    .central-name{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+    .central-name h1{
+        font-size: 35px;
+    }
+    .button-search{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+    .button-search input[type=text]{
+        width: 20rem;
+        height: 35px;
+      }
+      .button-search .microphone{
+        position: absolute;
+        top: 1px;
+        right: 25px;
+        padding: 0 5px;
+       }
+       .one-icon{
+        grid-column: 4/5;
+        grid-row: 4/5;
+    }
+    .two-icon{
+        grid-column: 5/6;
+        grid-row: 4/5;
+    }
+    .three-icon{
+        grid-column: 6/7;
+        grid-row: 4/5;
+    }
+    .four-icon{
+        grid-column: 7/8;
+        grid-row: 4/5;
+    }
+    .five-icon{
+        grid-column: 8/9;
+        grid-row: 4/5;
+    }
+    .six-icon{
+        grid-column: 4/5;
+        grid-row: 5/6;
+    }
+    .seven-icon{
+        grid-column: 5/6;
+        grid-row: 5/6;
+    }
+    .eight-icon{
+        grid-column: 6/7;
+        grid-row: 5/6;
+    }
+    .nine-icon{
+        grid-column: 7/8;
+        grid-row: 5/6;
+    }
+    .ten-icon{
+        grid-column: 8/9;
+        grid-row: 5/6;
+    }
+}
